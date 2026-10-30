@@ -53,7 +53,7 @@ The Elexon API is public and does not require an API key. Data is fetched on dem
 
 ## Deploy
 
-The included `Dockerfile` runs the backend and frontend in one container for a simple host deployment. For Vercel, deploy `frontend` as a Vite app and deploy `backend` separately; set the frontend API base URL to the backend URL. For Heroku or another Docker host, deploy from the repository root.
+The included `Dockerfile` runs the backend and frontend in one container for a simple host deployment. The repository also includes `vercel.json` and Vercel Python Function adapters, so it can deploy as one Vercel project. Set the Vercel project root to the repository root; Vercel builds `frontend/dist` and serves `/api/analysis` and `/api/health` from `api/`.
 
 
 ## Submission checklist
